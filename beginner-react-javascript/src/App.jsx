@@ -1,24 +1,26 @@
+import { useState } from "react";
 import "./App.css";
+import Buttons from "./components/Buttons";
+import Count from "./components/Count";
 
-{
-  /* <div className="container">
-      <h1>Very Cool</h1>
-    </div>
- */
-}
-// Above JSX Text Will Be Converted Into Below
-
-/* 
-React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement("h1", null, "Very Cool")
-);
- */
 function App() {
+  const [count, setCount] = useState(0);
+  function incrementCount() {
+    setCount((prevCount) => prevCount + 1);
+  }
+  function decrementCount() {
+    if (count === 0) {
+      return;
+    }
+    setCount((prevCount) => prevCount - 1);
+  }
   return (
     <div className="container">
-      <h1 onClick={() => console.log("test")}>Very Cool</h1>
+      <Count count={count} />
+      <div className="buttons">
+        <Buttons clickHandler={decrementCount}>-</Buttons>
+        <Buttons clickHandler={incrementCount}>+</Buttons>
+      </div>
     </div>
   );
 }
