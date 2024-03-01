@@ -1,14 +1,16 @@
+import Count from "./Count";
+import CountButtons from "./CountButtons";
+import ResetButton from "./ResetButton";
+import Title from "./Title";
+
 function App() {
   return (
     <main>
       <div className="card">
-        <h1 className="title">Fancy Counter</h1>
-        <p className="count">0</p>
-        <button className="reset-btn">Reset</button>
-        <div className="button-container">
-          <button>-</button>
-          <button>+</button>
-        </div>
+        <Title />
+        <Count />
+        <ResetButton />
+        <CountButtons />
       </div>
     </main>
   );
