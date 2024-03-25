@@ -24,4 +24,4 @@ I am mastering React and Next.js, and this repository contains resources and pro
 2. Install dependencies (`npm install` or `yarn install`)
 3. Refer to the instructions within each project folder.
 
-* **Course-Link:** https://bytegrad.com/courses/professional-react-nextjs
+Course-Link:** https://bytegrad.com/courses/professional-react-nextjs
